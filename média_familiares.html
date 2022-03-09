@@ -1,0 +1,23 @@
+<meta charset="UTF-8">
+<h1> Média de idades da família </h1>
+<script>
+    function pulaLinha() {
+        document.write("<br><br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+	
+	var familia = parseInt(prompt("Digite a quantidade de familiares"));
+	var soma_idades  = 0; 
+	for (var contador = 0; contador < familia; contador++) {
+		var idades = parseInt(prompt("Digite a idade do familiar"));
+		var soma_idades = idades + soma_idades; 
+	}	
+	
+	var media = soma_idades / familia;
+	
+	mostra("A média de idade da familia é de " + media);
+</script>

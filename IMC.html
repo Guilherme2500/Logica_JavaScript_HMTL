@@ -1,0 +1,47 @@
+<meta charset="UTF-8">
+
+<script>
+    function pulaLinha() {
+		document.write("<br><hr><br>");
+	}
+	
+	function mostra(frase) {
+		document.write("<big>" + frase + "</big>");
+		pulaLinha();
+	}
+	
+	function IMC(peso, altura) {
+	var IMC = peso/(altura ** 2);
+	return IMC;
+	}
+var peso = parseFloat(prompt("Digite seu peso: "))
+var altura = parseFloat(prompt("Digite sua altura: "))
+var meuImc = IMC(peso,altura)
+
+if (meuImc >= 25 && meuImc < 30) {
+		mostra("Seu IMC é de: " + Math.round(meuImc));
+		mostra(" Você está em sobrepeso! É recomendado dieta e exercícios físicos!")
+}
+
+if (meuImc >= 30) {
+mostra("Seu IMC é de: " + Math.round(meuImc));
+mostra("Você está com obesidade! Tome cuidado imediato com sua alimentação e faça exercícios físicos!")
+}
+
+if (meuImc < 18.5) {
+	mostra("Seu IMC é de: " + Math.round(meuImc));
+	mostra("Você está abaixo do recomendado de 18,5!")
+}
+
+if (meuImc > 18.5 && meuImc < 24.9) {
+		mostra("Seu IMC é de: " + Math.round(meuImc));
+		mostra("Você está no nível normal de peso, continue mantendo assim!")
+	}
+
+
+
+
+
+	
+
+</script>

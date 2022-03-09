@@ -1,0 +1,42 @@
+<meta charset="UTF-8">
+<h1> Adivinhe o número </h1>
+<script>
+	function pulaLinha() {
+		document.write("<br><br>");
+	}
+
+	function mostra(frase) {
+		document.write(frase);
+		pulaLinha();
+	}
+	function sorteia(n) {
+	var sorteado = Math.round(Math.random(0, n)* n)
+	return sorteado;
+	}
+	
+	var n = parseInt(prompt("Digite o número limite: "));
+	tentativas = 0;
+
+	while (tentativas < 3) {
+
+		var	numero_escolhido = sorteia(n);
+		var numero_usuário = parseInt(prompt("Digite um número entre 0 e " + n));
+
+		if (numero_escolhido == numero_usuário) {
+			mostra("Você acertou!! O numero escolhido foi: " + numero_escolhido);
+			break;
+		}else {	
+			mostra("Você errou!!! O numero escolhido pelo computador foi: " + Math.round(numero_escolhido) + ". Não desista, tente de novo!");
+		}
+
+		tentativas++;
+	}
+
+
+	
+
+
+
+
+	
+</script>
